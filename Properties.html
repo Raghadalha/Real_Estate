@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>العقارات </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="myFunctions.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">الصفحة الرئيسية</a></li>
+            <li><a href="AboutUs.html">من نحن</a></li>
+            <li><a href="properties.html">العقارات</a></li>
+        </ul>
+    </nav>
+<center> <h1>العقارات المتاحة للإيجار</h1></center>
+    <table>
+        <thead>
+            <tr>
+                <th>المدينة</th>
+                <th>التفاصيل</th>
+                <th>الإيجار الشهري</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+            
+        </thead>
+        <tbody id="flats">
+            <!-- بيانات سيتم تحميلها من ملف JSON -->
+
+        </tbody>
+    </table>
+    <button id="continueBtn">متابعة</button>
+    <form id="applicationForm" style="display:none;">
+        <h2>نموذج الطلب</h2>
+        <label for="fullName">الاسم الكامل:</label>
+        <input type="text" id="fullName" name="fullName" placeholder=" أحرف هجائية فقط باللغة العربية" >
+        <br>
+        <label for="nationalId">الرقم الوطني:</label>
+        <input type="text" id="nationalId" name="nationalId" placeholder="  11 خانة" required>
+        <br>
+        <label for="birthDate">تاريخ الولادة:</label>
+        <input type="text" id="birthDate" name="birthDate" placeholder="dd-mm-yyyy">
+        <br>
+        <label for="mobile">رقم الموبايل:</label>
+        <input type="text" id="mobile" name="mobile" placeholder="09XXXXXXXX">
+        <br>
+        <label for="email">الإيميل:</label>
+        <input type="email" id="email" name="email" placeholder="name@gmail.com">
+        <br>
+        <label for="captcha">CAPTCHA:</label>
+        <svg width="120" height="50">
+            <filter id="Filter">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="1" />
+            </filter>
+            <rect width="120" height="50" fill="#afcfe2" />
+            <text id="captcha" filter="url(#Filter)" fill="lightcoral" stroke="black" font-size="30" font-family="Ink Free" x="60" y="35"></text>
+        </svg>
+        <input type="text" id="captchaInput" name="captchaInput" placeholder="ادخل رمز التحقق" size="14" autocomplete="off" required>
+        <input type="button" id="recaptchBtn" value="تغيير الرمز" onclick="generateCaptcha()" />
+        <button type="button" onclick="validateCaptcha()">تحقق</button>
+        <button type="submit">إرسال</button>
+    </form>
+    <div id="successDialog" title="تم الحجز بنجاح " style="display:none;">
+        <p id="propertyDetails"></p>
+        
+    </div>
+</body>
+</html>

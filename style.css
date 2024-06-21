@@ -1,0 +1,266 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; 
+  color: #333; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+
+}
+h1 {
+  color: lightcoral; /* زهري */
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ظل خفيف */
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid lightcoral; /* إطار زهري */
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef); /* تدرج خلفية */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5); /* تأثير ناعم ثلاثي الأبعاد */
+}
+
+h3 {
+    color:rgb(3, 4, 14);
+}
+h2 {
+    color:rgb(3, 4, 14);
+    text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+
+tr:hover {
+  background-color: rgba(255, 182, 193, 0.699);
+}
+  
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.details-checkbox {
+  margin-right: 5px;
+}
+
+.extra-details {
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  display: none;
+}
+.continue {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px; 
+  background-color: #007bff;
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  font-size: 18px; 
+  text-align: center; 
+  text-decoration: none; 
+  transition: background-color 0.3s;
+}
+
+.continue:hover {
+  background-color: #0056b3; 
+}
+button[name="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  background-color: lightcoral;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+
+input[type="button"],
+input[type="submit"],button {
+  background-color: lightcoral;
+  color:#fff;
+  border-color: #fff;
+  border-radius: 150px;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+
+input[type="checkbox"] {
+width: 20px; 
+height: 20px;
+border: 2px solid #555; 
+border-radius: 3px; 
+outline: none; 
+cursor: pointer; 
+}
+
+input[type="checkbox"]:checked {
+background-color: #555; 
+border: 2px solid #555; 
+}
+p {
+  text-align: center;
+}
+#a {
+  text-align: right;
+}
+#image {
+width: 100;
+height: 100;
+}
+h6 {
+  text-align: right;
+}
+/* تنسيق الحقول النصية */
+input[type="text"], input[type="email"], input[type="submit"] {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* تنسيق النموذج */
+form {
+  margin: 10px 0;
+  padding: 5px;
+  border: 5px solid lightcoral;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* تنسيق نافذة Dialog */
+.ui-dialog {
+  font-family: "Arial", sans-serif;
+}
+
+.ui-dialog-titlebar {
+  background: lightcoral;
+  color: white;
+}
+
+.ui-dialog-content {
+  font-size: 14px;
+  padding: 20px;
+}
+
+.ui-dialog-buttonpane {
+  text-align: center;
+}
+
+/* تنسيق زر Dialog */
+.ui-dialog-buttonset button {
+  background: lightcoral;
+  color: lightcoral;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.ui-dialog-buttonset button:hover {
+  background: lightcoral;
+}
+#captcha, #refreshCaptcha {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+#refreshCaptcha {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#refreshCaptcha:hover {
+  background-color: #45a049;
+}
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.details-cell {
+  flex: 1;
+  padding: 5px;
+}
+.images-row {
+  display: flex;
+  justify-content: space-between;
+}
+.images-row .details-cell {
+  text-align: center;
+}
+.images-row img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.button1 {
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#captcha {
+  text-anchor: middle;
+}
